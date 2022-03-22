@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_main_container_header"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_container_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/activity_main_container_phone_dropdown_wrap"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/activity_main_container_phone_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_container_chat_wrap"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_main_container_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/chat" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/activity_main_container_body"
+        android:layout_width="match_parent"
+        android:layout_height="625dp"
+        android:background="#F5F5F5"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_container_tabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/activity_main_container_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:tabIconTint="@color/black"
+        app:tabIndicatorColor="#00FFFFFF"
+        app:tabIndicatorHeight="0sp"
+        app:tabSelectedTextColor="#4CAF50"
+        app:tabTextColor="#969696">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/communication_logo"
+            android:text="Связь" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/finances_logo"
+            android:text="Финансы" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/services_logo"
+            android:text="Услуги" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/for_me_logo"
+            android:text="Для меня" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/more_logo"
+            android:text="Еще" />
+    </com.google.android.material.tabs.TabLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
