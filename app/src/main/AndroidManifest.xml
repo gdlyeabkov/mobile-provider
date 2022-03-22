@@ -7,6 +7,14 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,6 +31,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CostsActivity"
+            android:exported="true"
+            />
+        <activity android:name=".DetalizationActivity"
+            android:exported="true"
+            />
     </application>
 
 </manifest>

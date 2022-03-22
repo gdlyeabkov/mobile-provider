@@ -1,13 +1,441 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_communication_container"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+     android:layout_width="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:id="@+id/activity_communication_container_body"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Связь(2)" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_communication_container_packages_lefts_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Остатки по пакетам" />
+
+        <LinearLayout
+            android:id="@+id/activity_communication_container_packages"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_communication_container_change_payment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_communication_container_history_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Истории" />
+
+        <HorizontalScrollView
+            android:id="@+id/activity_communication_container_history"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/activity_communication_container_costs_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Расходы" />
+
+        <LinearLayout
+            android:id="@+id/activity_communication_container_costs"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="@drawable/rounded_plate"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Март" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 ₽"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="80"
+                android:progressBackgroundTint="#FF9800"
+                android:progressTint="#E91E63" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="?android:attr/textSelectHandleLeft"
+                        app:tint="#E91E63" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0"
+                    android:text="Сообщения" />
+
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="?android:attr/textSelectHandleRight"
+                        app:tint="#FF9800" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Звонки" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Подробнее"
+                android:textAlignment="textEnd"
+                android:textColor="#009688" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мегафон ТВ" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/cost" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="Пополнить счет" />
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chevron_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/communication_logo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="Мой тариф" />
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chevron_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/services_logo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="325dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Подключенные" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Услуги, опции и сервисы" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chevron_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/family" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="Моя семья" />
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chevron_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/world" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="Роуминг" />
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chevron_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/car" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="Заказать SIM-карту" />
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chevron_right" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

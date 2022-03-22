@@ -1,14 +1,18 @@
 package softtrack.apps.mobileprovider;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.Manifest;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         findViews();
         initializeWidgets();
         addHandlers();
+        checkSendMessages();
     }
 
     public void findViews() {
@@ -100,4 +105,30 @@ public class MainActivity extends AppCompatActivity {
         return phoneNumber;
     }
 
+    public void checkSendMessages() {
+        //Getting intent and PendingIntent instance
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent,0);
+        //Get the SmsManager instance and call the sendTextMessage method to send message
+        SmsManager sms = SmsManager.getDefault();
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.SEND_SMS }, 2);
+        } else {
+            sendMessages();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        boolean isSendSmsCode = requestCode == 2;
+        if (isSendSmsCode) {
+            sendMessages();
+        }
+    }
+
+    public void sendMessages() {
+        // отправлять смс в случае если установлен пункт в настройках отправлять смс при входе с другого устройства
+        // sms.sendTextMessage("", null, "message from application", pi, null);
+    }
 }

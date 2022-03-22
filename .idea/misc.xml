@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/android_projects/mobileprovider/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/android_projects/mobileprovider/app/src/main/res/drawable/rounded_plate.xml" value="0.2703125" />
-        <entry key="..\:/android_projects/mobileprovider/app/src/main/res/layout/activity_communication.xml" value="0.13020833333333334" />
+        <entry key="..\:/android_projects/mobileprovider/app/src/main/res/layout/activity_communication.xml" value="0.264" />
+        <entry key="..\:/android_projects/mobileprovider/app/src/main/res/layout/activity_costs.xml" value="0.264" />
+        <entry key="..\:/android_projects/mobileprovider/app/src/main/res/layout/activity_detalization.xml" value="0.13020833333333334" />
         <entry key="..\:/android_projects/mobileprovider/app/src/main/res/layout/activity_fincances.xml" value="0.264" />
         <entry key="..\:/android_projects/mobileprovider/app/src/main/res/layout/activity_for_me.xml" value="0.13020833333333334" />
         <entry key="..\:/android_projects/mobileprovider/app/src/main/res/layout/activity_main.xml" value="0.36231884057971014" />
