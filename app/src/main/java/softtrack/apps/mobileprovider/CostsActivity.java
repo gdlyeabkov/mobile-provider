@@ -12,6 +12,7 @@ public class CostsActivity extends AppCompatActivity {
 
     public LinearLayout activityCostsContainerCalls;
     public LinearLayout activityCostsContainerMessages;
+    public LinearLayout activityCostsContainerDateUsage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,11 +26,13 @@ public class CostsActivity extends AppCompatActivity {
     public void initialize() {
         findViews();
         addHandlers();
+        initializeActionBar();
     }
 
     public void findViews() {
         activityCostsContainerCalls = findViewById(R.id.activity_costs_container_calls);
         activityCostsContainerMessages = findViewById(R.id.activity_costs_container_messages);
+        activityCostsContainerDateUsage = findViewById(R.id.activity_costs_container_data_usage);
     }
 
     public void addHandlers() {
@@ -49,6 +52,18 @@ public class CostsActivity extends AppCompatActivity {
                 CostsActivity.this.startActivity(intent);
             }
         });
+        activityCostsContainerDateUsage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CostsActivity.this, DetalizationActivity.class);
+                intent.putExtra("data", "dataUsage");
+                CostsActivity.this.startActivity(intent);
+            }
+        });
+    }
+
+    public void initializeActionBar() {
+        setTitle("Расходы");
     }
 
 }
